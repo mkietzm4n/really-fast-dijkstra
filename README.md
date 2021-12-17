@@ -12,7 +12,8 @@ This code is really fast. It's so fast, it'll make you wonder "Dang, how'd he ma
   - 16 cores (uchicago linux6)
 
 ~6.5X faster! :rocket::rocket:
-Celebrity endorsements:
+
+# Celebrity Endorsements
 
 <p align="center">
 "wow, that is really fast." - Kyle Felker, 2021
