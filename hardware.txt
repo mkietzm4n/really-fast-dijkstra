@@ -1,0 +1,28 @@
+cat /proc/cpuinfo
+...
+processor       : 143
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 85
+model name      : Intel(R) Xeon(R) Platinum 8354H CPU @ 3.10GHz
+stepping        : 11
+microcode       : 0x700001d
+cpu MHz         : 3478.681
+cache size      : 25344 KB
+physical id     : 3
+siblings        : 36
+core id         : 27
+cpu cores       : 18
+apicid          : 247
+initial apicid  : 247
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 31
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+bugs            : spectre_v1 spectre_v2 spec_store_bypass swapgs
+bogomips        : 6202.47
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+power management:
