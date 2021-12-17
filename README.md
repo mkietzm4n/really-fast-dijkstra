@@ -1,5 +1,15 @@
-# Performant Dijkstra
+# Fast Dijkstra
+Execution duration comparisons for graph2.txt processing
+- Best code from last year's class with 112 threads: 125.48(s)
+  - 56 core machine
+- My code with 144 threads: 19.39(s)
+  - 18 cores (JSLE Cooper Lake node, details in Hardware.txt)
+- My code with 32 threads: 75.34(s)
+  - 16 cores (uchicago linux6)
+- My code with 16 threads: 128.62(s)
+  - 16 cores (uchicago linux6)
 
+~6X faster! :rocket::rocket:
 # Instructions
 To compile this project in a Unix or Linux distribution, first clone my repository to your machine and ensure you have gcc installed. 
 Then open a terminal instance and navigate to your clone of my repository. Once inside the repository root folder, enter the following command:
