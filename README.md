@@ -1,4 +1,3 @@
-# Really Fast Dijkstra
 # Intro
 This code is really fast. It's so fast, it'll make you wonder "Dang, how'd he make that code so dang fast?". Here's a quick comparison to show just how fast this really fast code is:
 
