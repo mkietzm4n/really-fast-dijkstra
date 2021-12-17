@@ -27,8 +27,8 @@ This code is really fast. It's so fast, it'll make you wonder "Dang, how'd he ma
 
 # Optimizations
 Here are the optimizations I made beyond the original project specifications ordered by impact on performance, with 1 having the greatest impact, and 7 having a trivial impact. I have not collected any data to support these rankings, they are simply based on my understanding of algorithms and system memory management. Further details/explanations for each item are available in the associated comments.
-- (1) Added a multipurpose "tracker" array member to the priority queue struct. See comments on lines 32-38 of priority_queue.c
-- (2) Stored distance associated with each vertex on the PriorityQueueNode struct itself, rather than maintaining a seperate "dist" array as was used in the template dijkstra implementation. See comments on lines 3-7 of prioirity_queue.h
+- (1) Added a multipurpose "tracker" array member to the priority queue struct. See comments on lines 32-66 of priority_queue.c
+- (2) Stored distance associated with each vertex on the PriorityQueueNode struct itself, rather than maintaining a seperate "dist" array as was used in the template dijkstra implementation. See comments on lines 3-12 of prioirity_queue.h
 - (3) Collected longest path results during disassembly of the priority queue. See comments on lines 21-27 of dijkstra.c
 - (4) Stored the outgoing edges of each vertex as an array (as opposed to a linked list). See comments on lines 56-60 of graph.c. This one seemed like a powerful optimization to me - I put it lower on the list since I saw some others in the class had the same idea, but got different performance results
 - (5) Passed prioirity queue to pq methods directly (no pointer). See comments on lines 21-26 of prioirity_queue.c
