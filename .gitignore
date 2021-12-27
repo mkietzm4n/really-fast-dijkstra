@@ -50,7 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-results*.dat
 settings.json
-graph2.txt
+input/graph2.txt
 results.txt
