@@ -43,9 +43,9 @@ Then open a terminal instance and navigate to your clone of my repository. Once 
 ```bash
 $ make
 ```
-This command will output one executable: dijkstra.out. To reproduce my results for graph1 or graph2, supply the corresponding filename as a command line argument:
+This command will output one executable: dijkstra.out. To reproduce my results for graph1 or graph2 (located in the input directory), supply the corresponding filename as a command line argument:
 ```bash
-$ ./dijkstra.out [filename]
+$ ./dijkstra.out input/[filename]
 ```
 Notes: 
 - I did not add any validation on the name of the provided file - if you run the program and get a segmentation fault, check you have the filename spelled right (or in the case of graph2, that you've unzipped `graph2.txt.gz` to `graph2.txt`).
