@@ -5,7 +5,7 @@ This code is really fast. It's so fast, it'll make you wonder "Dang, how'd he ma
 - Best code from last year's class with 112 threads: 125.48(s)
   - 56 core machine
 - My code with 144 threads: 19.39(s)
-  - 18 cores (JSLE Cooper Lake node, details in Hardware.txt)
+  - 18 cores (JSLE Cooper Lake node, details in etc/hardware.txt)
 - My code with 32 threads: 75.34(s)
   - 16 cores (uchicago linux6)
 - My code with 16 threads: 128.62(s)
@@ -124,5 +124,5 @@ These errors disappeared when I commented out my usage of OpenMP, letting the pr
 I can only assume it is the usage of OpenMP that is causing the memory leaks (or simply throwing off valgrind), and not my code.
 
 # Testing
-- To test my implementation of dijkstra and the priority queue using a binary heap, I created a graph of order 10 and size 16. I made the graph not strongly connected for better testing of edge cases - vertices 0 and 5 have no outgoing edges, and vertex 6 only has outgoing edges. To ensure correctness of my code, I manually performed dijkstra's algorithm for all 10 vertices and collected the 10 longest paths, comparing them with the results of my program. I found the results to be identical, giving me confidence that the above results section is accurate. You can see the results of my manual dijkstra calculations in custom_graph.xlsx. 
+- To test my implementation of dijkstra and the priority queue using a binary heap, I created a graph of order 10 and size 16. I made the graph not strongly connected for better testing of edge cases - vertices 0 and 5 have no outgoing edges, and vertex 6 only has outgoing edges. To ensure correctness of my code, I manually performed dijkstra's algorithm for all 10 vertices and collected the 10 longest paths, comparing them with the results of my program. I found the results to be identical, giving me confidence that the above results section is accurate. You can see the results of my manual dijkstra calculations in etc/custom_graph.xlsx. 
 - I also made my graph_create function perform tests to ensure the integrity of the graph datafile provided, printing to stdout if any assumptions I have made about the data provided are invalid. It is expected for these tests to be quiet and not produce any output during the regular execution of dijkstra.out. The tests have ~0 affect on the execution duration of the program.
