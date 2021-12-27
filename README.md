@@ -1,5 +1,7 @@
-# Fast Dijkstra
-Execution duration comparisons for graph2.txt processing
+# Intro
+This code is really fast. It's so fast, it'll make you wonder "Dang, how'd he make that code so dang fast?". Here's a quick comparison to show just how fast this really fast code is:
+
+(Execution durations for graph2.txt processing)
 - Best code from last year's class with 112 threads: 125.48(s)
   - 56 core machine
 - My code with 144 threads: 19.39(s)
@@ -9,7 +11,32 @@ Execution duration comparisons for graph2.txt processing
 - My code with 16 threads: 128.62(s)
   - 16 cores (uchicago linux6)
 
-~6X faster! :rocket::rocket:
+~6.5X faster! :rocket::rocket:
+
+# Celebrity Endorsements
+ 
+<p align="center">
+"wow, that is really fast." - Kyle Felker, 2021
+</p>
+<p align="center">
+":rocket:" - Amanda Lund, 2021
+</p>
+<p align="center">
+"Vroom vroom." - Edsger Dijkstra, 1959
+</p>
+
+# Optimizations
+Here are the optimizations I made beyond the original project specifications ordered by impact on performance, with 1 having the greatest impact, and 7 having a trivial impact. I have not collected any data to support these rankings, they are simply based on my understanding of algorithms and system memory management. Further details/explanations for each item are available in the associated comments.
+- (1) Added a multipurpose "tracker" array member to the priority queue struct. See comments on lines 32-66 of priority_queue.c
+- (2) Stored distance associated with each vertex on the PriorityQueueNode struct itself, rather than maintaining a seperate "dist" array as was used in the template dijkstra implementation. See comments on lines 3-12 of prioirity_queue.h
+- (3) Collected longest path results during disassembly of the priority queue. See comments on lines 21-27 of dijkstra.c
+- (4) Stored the outgoing edges of each vertex as an array (as opposed to a linked list). See comments on lines 56-60 of graph.c. This one seemed like a powerful optimization to me - I put it lower on the list since I saw some others in the class had the same idea, but got different performance results
+- (5) Passed prioirity queue to pq methods directly (no pointer). See comments on lines 21-26 of prioirity_queue.c
+- (6) Used bit shifting in place of division/multiplication by 2 while navigating the priority queue
+- (7) Implemented a 1-based index priority queue (really just makes code cleaner). See comments on lines 8-10 of priority_queue.c
+
+Reference used for implementation of prioirity queue using a min binary heap: https://bradfieldcs.com/algos/trees/priority-queues-with-binary-heaps/
+
 # Instructions
 To compile this project in a Unix or Linux distribution, first clone my repository to your machine and ensure you have gcc installed. 
 Then open a terminal instance and navigate to your clone of my repository. Once inside the repository root folder, enter the following command:

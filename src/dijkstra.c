@@ -19,11 +19,12 @@ void dijkstra(Graph graph, int start, Result* results) {
 
   /*
     Processed nodes are guaranteed to be removed from the priority queue
-    in order of least to greatest dist. Therefore, the items latest removed
+    in order of least to greatest dist. Therefore, the items last removed
     from the queue with have the greatest dist. I accumulate items removed 
     from the queue in this rank array, then collect 10 nodes (or as many as
     were processed, whichever is fewer) from the back of rank after dijkstra 
-    is complete.
+    is complete. This improves performance by avoiding sorting of the entire
+    list of distance results after dijkstra is complete.
   */
   PriorityQueueNode* rank = malloc(graph.order*sizeof(PriorityQueueNode));
 
